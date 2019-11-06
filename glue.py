@@ -1,8 +1,5 @@
-# pip install opencv-python
-import cv2
-import glob, os
+import glob
 from PIL import Image
-# os.chdir("D://site//_files//")
 
 col_array = []
 row_array = []
@@ -15,14 +12,9 @@ for file in glob.glob("*.jpg"):
 
 row_array = set(row_array)
 col_array = set(col_array)
-print(row_array)
-print(col_array)
-
 
 row_array = list(row_array)
 col_array = list(col_array)
-print(row_array)
-print(col_array)
 
 
 width = 0
@@ -33,8 +25,6 @@ for i in range(col_array[-1] + 1):
     img = Image.open(file)
     w, h = img.size
     width += w
-print(width)
-
 
 height = 0
 file_name = "image_tile_"
@@ -44,9 +34,6 @@ for i in range(row_array[-1] + 1):
     img = Image.open(file)
     w, h = img.size
     height += h
-
-print(height)
-
 
 new_im = Image.new('RGB', (width, height))
 
@@ -68,7 +55,6 @@ for i in range(row_array[-1] + 1):
 
     x = 0
     y += h
-
 
 
 new_im.save('image.jpg')
