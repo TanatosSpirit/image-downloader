@@ -67,7 +67,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-browser = webdriver.Chrome('E:\chromedriver_win32\chromedriver')
+browser = webdriver.Chrome('D:\chromedriver_win32\chromedriver')
 
 browser.get('http://vma.muar.ru/ru/subjects/dvorec-truda-konkursnyy-proekt-perspektiva-1922-1')
 
